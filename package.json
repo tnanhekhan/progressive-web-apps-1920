@@ -1,0 +1,25 @@
+{
+  "name": "progressive-web-apps-1920",
+  "version": "1.0.0",
+  "description": "progressive web apps project based on oba project",
+  "main": "app.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnanhekhan/progressive-web-apps-1920.git"
+  },
+  "author": "tnanhekhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnanhekhan/progressive-web-apps-1920/issues"
+  },
+  "homepage": "https://github.com/tnanhekhan/progressive-web-apps-1920#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
