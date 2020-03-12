@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/styles.css"/>
+    <link rel="stylesheet" href="src/css/button.css"/>
+    <link rel="stylesheet" href="src/css/modal.css"/>
+    <link rel="icon" href="favicon.svg" sizes=" any " type=" image/svg+xml ">
+    <title>Spreekbeurt Helper</title>
+</head>
+
+<body>
+<div class=" top-section ">
+    <div class="group-buttons-container ">
+        <a class="button" id="home-button">Begin opnieuw</a>
+    </div>
+    <div class=" search-container " id="main-search">
+        <input type=" text " class=" book-search-input " id="main-search-input"
+               placeholder="Toets hier een ander onderwerp in! "/>
+        <a id="main-search-button" class="button search-button">Ga!</a>
+    </div>
+</div>
+<div class="loader-container">
+    <h2 class="loader-message">Wij zoeken nu naar jouw boeken!</h2>
+    <img class="loader" src="./src/resources/book-solid.svg">
+</div>
+<div class="main-section ">
+    <div id="book-results-container" class="book-results-container">
+        <div class="book-result">
+            <img class="book-cover-image"/>
+            <h2 class="book-title"></h2>
+            <p class="book-description"></p>
+            <a class="button small-button red-button book-button">Bekijk Boek</a>
+        </div>
+    </div>
+</div>
+<!-- Inital modal that will be shown to the user to select a subject -->
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+<div id="modal" class="modal">
+    <div id="select-group" class="modal-content">
+        <h2>Welkom bij de spreekbeurt helper!</h2>
+        <p>In welke groep zit je?</p>
+        <div id="modal-group-container" class="group-buttons-container">
+            <a class="button modal-group"></a>
+        </div>
+    </div>
+
+    <div id="topic-question" class="modal-content">
+        <p>Weet je al een onderwerp?</p>
+        <div class="group-buttons-container">
+            <a id="yes-button" class="button">Ja</a>
+            <a id="no-button" class="button">Nee</a>
+        </div>
+    </div>
+
+    <div id="select-topic" class="modal-content">
+        <div id="no-known-subject-topics">
+            <p>Kies een onderwerp dat jij leuk vindt!</p>
+            <div id="modal-topics-container" class="group-buttons-container">
+                <a class="button modal-topic"></a>
+            </div>
+        </div>
+        <div id="known-subject-topics">
+            <p>Vul hier jouw onderwerp in:</p>
+            <div class="search-container ">
+                <input type="text " class="book-search-input " id="modal-search-input"
+                       placeholder="Toets hier jouw onderwerp in! "/>
+                <a id="modal-search-button" class="button search-button">Zoeken</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-section detail-section">
+    <div id="book-detail-container">
+        <div class="book-detail-header">
+            <a class="button red-button book-detail-back-button" id="book-detail-back-button">Terug</a>
+        </div>
+        <div class="book-detail-result ">
+            <img class="book-detail-cover-image"/>
+            <div class="book-detail-text">
+                <h2 class="book-detail-title "></h2>
+                <p class="book-detail-author"></p>
+                <p class="book-detail-description "></p>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="button" id="more-books-button">Meer boeken</a>
+
+<script src="./src/js/app.js" type="module"></script>
+</body>
+
+</html>
