@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/tnanhekhan/progressive-web-apps-1920#readme",
   "dependencies": {
+    "ejs": "^3.0.1",
     "express": "^4.17.1"
   }
 }
