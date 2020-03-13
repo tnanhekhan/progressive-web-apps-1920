@@ -1,7 +1,7 @@
 # Progressive Web Apps
 This project is based on a project for OBA: https://github.com/tnanhekhan/project-1-1920
 
-##Install
+## Install  
 Clone this repo with your favourite GIT CLI or GUI.  
 CD to the root of the project folder.  
 Run ` npm install ` to install this project and its necessary dependencies.  
