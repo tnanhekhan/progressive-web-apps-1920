@@ -1,7 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/modal");
 
 const app = express();
 const port = 3000;
@@ -28,7 +28,7 @@ app.use(function (err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.render('error', {title: `Error ${err.status}`});
 });
 
 module.exports = app;
