@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 12.16
+  - 12.16
 script: true
 deploy:
   provider: heroku
@@ -9,3 +9,6 @@ deploy:
   app: spreekbeurt-helper
   on:
     repo: tnanhekhan/progressive-web-apps-1920
+branches:
+  only:
+    - staging
