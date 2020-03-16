@@ -9,6 +9,7 @@ deploy:
   app: spreekbeurt-helper
   on:
     repo: tnanhekhan/progressive-web-apps-1920
+    branch: staging
 branches:
   only:
     - staging
