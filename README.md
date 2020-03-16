@@ -1,4 +1,4 @@
-# Progressive Web Apps
+# Progressive Web Apps [![Build Status](https://travis-ci.com/tnanhekhan/progressive-web-apps-1920.svg?branch=master)](https://travis-ci.com/tnanhekhan/progressive-web-apps-1920)  
 This project is based on a project for OBA: https://github.com/tnanhekhan/project-1-1920
 
 ## Install  
