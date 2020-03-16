@@ -1,4 +1,11 @@
 language: node_js
 node_js:
-  - 12.16
+- 12.16
 script: true
+deploy:
+  provider: heroku
+  api_key:
+    secure: xzKcQuA2KzJlSlzSMU1bi9v6o8m5jwMwLeUYaIV/PTbfI47+wkzmmoMPsRR1+lzwysAS27lnyDzJh2Xzz+Hgy+u/Nlb6WeBSFvktqb6QTHIgpU10UD2xC0zn0R53dO3UkoIWrdQTYn97Yh51xZiygb0p3KE+GXYhY0ht0fDR3kAs9sKHROtrOwRLkf9o2z6YOrlje8FFFxvDS5gfWG64yba7x2SOj9Ny4pXHM/4sChz1Ipe7FWTJ7moOGUvwqvm2/epfoW3srPelN0vZPOjwJWu0zZVRHYOexByHGFDULtS7pX9SdAKtsdIrjEjgsvHABrxBLQkbYQyd/oPfEIzhtGtibFPEqHes8vfGoSrd6vyOJCkwE/GpVp92l7/9Q+m8I5s27USkCKAQXzo1OwGSx6ApFvaWeD6rmnnfH/R47JfHk1kGUN7PBtKv8FPejadh1WPWHDTXa+b3jKl68vAcftLRraWTpwV0/yjKofRATsQ5feXh/nicq6iFqVW4ZFLr7LIPMS88mA9b8h8EpjPdDZl2NDRdDLO4jqkWgKpG0qLG8XhJP8x0IUldhTnlJ3L+YkW0Dnvlaf6i98BW6n1AmxF26veiLlEE48WdyuKuKNHoAfmGEjr7eJp9Lit3+y2xQWBr0/OGrFEpjTW1OTysDL7GBJMPJbC4gcr2F0ud6XY=
+  app: progressive-web-apps-1920
+  on:
+    repo: tnanhekhan/progressive-web-apps-1920
