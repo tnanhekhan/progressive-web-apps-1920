@@ -1,4 +1,4 @@
 language: node_js
-before_script:
-  - npm install ejs
+node_js:
+  - 12.16
 script: true
