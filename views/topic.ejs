@@ -4,7 +4,11 @@
         <div id="no-known-subject-topics">
             <p>Kies een onderwerp dat jij leuk vindt!</p>
             <div id="modal-topics-container" class="group-buttons-container">
-                <a class="button modal-topic"></a>
+                <% for(let topic in topics) { %>
+                    <a class="button modal-topic" href="/topic/<%= topics[topic].toString().toLowerCase() %>">
+                        <%= topics[topic] %>
+                    </a>
+                <% } %>
             </div>
         </div>
     </div>

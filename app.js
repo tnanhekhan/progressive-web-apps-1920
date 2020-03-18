@@ -1,7 +1,8 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const indexRouter = require("./routes/modal");
+const modalRouter = require("./routes/modal");
+const overviewRouter = require("./routes/overview");
 
 const app = express();
 const port = 3000;
@@ -11,7 +12,8 @@ const port = 3000;
 app.set("view engine", "ejs")
     .set("views", "views")
     .use(express.static('public'))
-    .use("/", indexRouter);
+    .use("/", modalRouter)
+    .use("/topic", overviewRouter);
 
 app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
 

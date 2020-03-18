@@ -1,5 +1,6 @@
 const express = require("express");
-const TopicRepository = require("../models/topic-repository.js");
+const TopicRepository = require("../models/repo/topic-repository.js");
+
 const router = express.Router();
 const repo = new TopicRepository();
 
