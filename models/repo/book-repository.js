@@ -1,6 +1,6 @@
-import {Api} from "../api/api.mjs"
+const Api = require("../api/api");
 
-export class BookRepository {
+class BookRepository {
     constructor(api = new Api()) {
         this.api = api;
     }
@@ -41,3 +41,5 @@ export class BookRepository {
         return this.api.getXML(endpoint, params)
     }
 }
+
+module.exports = BookRepository;

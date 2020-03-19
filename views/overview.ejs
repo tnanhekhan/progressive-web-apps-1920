@@ -1,27 +1,31 @@
 <%- include ("./partials/head.ejs") %>
 <div class="top-section">
     <div class="group-buttons-container">
-        <a class="button" id="home-button">Begin opnieuw</a>
+        <a class="button" id="home-button" href="/">Begin opnieuw</a>
     </div>
-    <div class="search-container" id="main-search">
-        <input type=" text " class=" book-search-input " id="main-search-input"
+    <form class="search-container" id="main-search">
+        <input type=" text " name="topic" class=" book-search-input " id="main-search-input"
                placeholder="Toets hier een ander onderwerp in! "/>
-        <a id="main-search-button" class="button search-button">Ga!</a>
-    </div>
-</div>
-<div class="loader-container">
-    <h2 class="loader-message">Wij zoeken nu naar jouw boeken!</h2>
-    <img class="loader" src="/img/book-solid.svg">
+        <button type="submit" id="main-search-button" class="button search-button">Ga!</button>
+    </form>
 </div>
 <div class="main-section ">
     <div id="book-results-container" class="book-results-container">
-        <div class="book-result">
-            <img class="book-cover-image"/>
-            <h2 class="book-title"></h2>
-            <p class="book-description"></p>
-            <a class="button small-button red-button book-button">Bekijk Boek</a>
-        </div>
+        <% books.forEach(book => { %>
+            <div class="book-result">
+                <img class="book-cover-image" src="<%= book.cover %>"/>
+                <h2 class="book-title"><%= book.title %></h2>
+                <p class="book-description"><%= book.author %></p>
+                <% if (currentPage === 1) { %>
+                    <a class="button small-button red-button book-button"
+                       href="<%= title.toLowerCase() %>/book/<%= book.id %>">Bekijk Boek</a>
+                <% } else { %>
+                    <a class="button small-button red-button book-button"
+                       href="<%= bookDetailRoute %><%= book.id %>">Bekijk Boek</a>
+                <% } %>
+            </div>
+        <% }); %>
     </div>
 </div>
-<a class="button" id="more-books-button">Meer boeken</a>
+<a class="button" id="more-books-button" href="<%= moreBooksRoute %>">Meer boeken</a>
 <%- include ("./partials/footer.ejs") %>
