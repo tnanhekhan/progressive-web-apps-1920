@@ -8,6 +8,10 @@ router.get("/", (req, res) => {
     res.render('modal', {title: 'Spreekbeurt Helper', groups: repo.getGroups()});
 });
 
+router.get("/offline", (req, res) => {
+    res.render('offline', {title: 'Offline'});
+});
+
 router.get("/group/:group", (req, res) => {
     res.render('group', {title: "Onderwerp Keuze", group: req.params.group})
 });
