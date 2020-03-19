@@ -11,3 +11,7 @@ Run ` npm install ` to install this project and its necessary dependencies.
 ## Usage
 Run `npm dev` and go to `localhost:3000` to see the dev version running with nodemon.  
 Run `npm start` and go to `localhost:3000` to see the dev version running.
+
+## Job Stories
+- When I am offline, i want to be notified by the app that i am offline so that I know I need to enable internet
+- When I open the app, i want to be able to install the app so I have a progressive web app experience
