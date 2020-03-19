@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const modalRouter = require("./routes/modal");
 const overviewRouter = require("./routes/overview");
+const detailRouter = require("./routes/detail");
 
 const app = express();
 const port = 3000;
@@ -13,7 +14,9 @@ app.set("view engine", "ejs")
     .set("views", "views")
     .use(express.static('public'))
     .use("/", modalRouter)
-    .use("/topic", overviewRouter);
+    .use("/topic", overviewRouter)
+    .use("/topic/:topic/book", detailRouter)
+    .use("/topic/:topic/:page/book", detailRouter);
 
 app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
 

@@ -13,8 +13,12 @@ router.get("/group/:group", (req, res) => {
 });
 
 router.get("/group/:group/:knowsSubject", (req, res) => {
+    if (req.query.topic != null) {
+        res.redirect(`/topic/${req.query.topic}`);
+    }
+
     if (req.params.knowsSubject === "true") {
-        res.render('topic-search', {title: "Onderwerp invullen"})
+        res.render('topic-search', {title: "Onderwerp invullen"});
     } else {
         if (req.params.group < 7) {
             res.render("topic", {title: "Onderwerp kiezen", topics: repo.getTopicsYouth()})
