@@ -18,9 +18,6 @@ self.addEventListener('install', event => {
     );
 });
 
-self.addEventListener('activate', event => {
-});
-
 self.addEventListener('fetch', event => {
     event.respondWith(caches.match(event.request)
         .then(cachedResponse => {
@@ -34,7 +31,3 @@ self.addEventListener('fetch', event => {
         })
     );
 });
-
-function isHtmlGetRequest(request) {
-    return request.method
-}
