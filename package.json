@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "progressive web apps project based on oba project",
   "main": "app.js",
-  "directories": {
-    "example": "examples"
-  },
   "browserslist": [
     "last 2 version",
     "> 2%"
