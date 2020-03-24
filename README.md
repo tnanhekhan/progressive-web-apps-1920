@@ -58,6 +58,9 @@ No Service Worker: ![no-service-worker](docs/after-minify.png "no-service-worker
 
 With Service Worker: ![with-service-worker](docs/with-service-worker.png "with-service-worker")
 
+### Loading CSS Async
+This project had three css files which I combined into one file. The problem was that css files are render-blocking. To prevent this the css needs to be loaded asynchronously. 
+
 ### Audit Results
 The audit after the performance enhancement is a bit slower because it is deployed on a live environment instead of a local environment. Other than Search Engine Optimization all audit scores are higher after the performance enhancement.
 
