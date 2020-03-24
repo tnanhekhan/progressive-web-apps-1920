@@ -24,6 +24,7 @@
   "homepage": "https://github.com/tnanhekhan/progressive-web-apps-1920#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-minify-html": "^0.12.0",

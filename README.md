@@ -59,10 +59,14 @@ No Service Worker: ![no-service-worker](docs/after-minify.png "no-service-worker
 With Service Worker: ![with-service-worker](docs/with-service-worker.png "with-service-worker")
 
 ### Loading CSS Async
-This project had three css files which I combined into one file. The problem was that css files are render-blocking. To prevent this the css needs to be loaded asynchronously. 
+The problem was that css files are render-blocking. This project had three css files which I combined into one file.  To prevent this the css needs to be loaded asynchronously. I have used [this](https://www.filamentgroup.com/lab/load-css-simpler/) resource for the solution.
 
-### Audit Results
-The audit after the performance enhancement is a bit slower because it is deployed on a live environment instead of a local environment. Other than Search Engine Optimization all audit scores are higher after the performance enhancement.
+Lighthouse opportunity before async css: ![before-async-css](docs/render-blocking-css.png "before-async-css") 
+
+Now the opportunity doesn't show anymore and according to the audit the first meaningful paint is even 200ms faster.
+
+### Audit
+The Chrome Lighthouse audit after the performance enhancement is 200 ms faster on Heroku than before on the local version, which is pretty good. On the audit scores Best Practices and SEO there is a noticeable improvement and the audit even acknowledges that the project is a Progressive Web App. 
 
 Audit before Performance Enhancement: ![audit-before](docs/audit-before.png "audit-before") 
 

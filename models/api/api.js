@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 
 class Api {
@@ -11,7 +12,7 @@ class Api {
     async get(endpoint, params) {
         let cors = "https://yacdn.org/proxy/";
         let baseUrl = "https://zoeken.oba.nl/api/v1";
-        let authorization = "&authorization=ffbc1ededa6f23371bc40df1864843be";
+        let authorization = process.env.API_KEY;
         let output = "&output=json";
         try {
             return await axios.get(cors + baseUrl + endpoint + params + authorization + output);
