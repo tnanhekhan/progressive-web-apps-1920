@@ -35,23 +35,35 @@ Feedback over:
 
 ## Performance Enhancement
 ### Perceived Load Speed
-#### Minify
+#### Minified CSS and Images
 With the help of the gulp scripts `gulp-clean-css` and `gulp-imagemin` I have minified the css and images the app uses. The images show the size difference in the network tab of chrome dev tools. The total size decrease is 4kb or around 1.81% in this case. The load time however is somehow 1 ms longer on the version with the minified assets
 
 Before: ![before-minify](docs/before-minify.png "before-minify") 
 
 After: ![after-minify](docs/after-minify.png "after-minify")
+
+#### Minified HTML
+With the npm dependency `express-minify-html` you can minify the views the express render method uses. The minified HTML version it's localhost html file is 0.6 kb smaller than the non-minified version.  
+
+No Minified HTML: ![no-minified-html](docs/after-minify.png "no-minified-html")
+
+Minified HTML: ![minified-html](docs/minify-html.png "minified-html")
+
 #### Service Worker Caching
-One of the requirements of this exercise is that we had to implement a service worker which caches some assets and shows an offline page. The images show below the time it takes to load the page. The version with the implemented service worker loads the page 24 ms (or 16%) faster than the version without a service worker.
+One of the requirements of this exercise is that we had to implement a service worker which caches some assets and shows an offline page. The images show below the time it takes to load the page. The version with the implemented service worker loads the page 35 ms (or 23%) faster than the version without a service worker. The transferred size has also decreased by  ~215 kb.
 
 No Service Worker: ![no-service-worker](docs/after-minify.png "no-service-worker") 
 
-With Service Worker: ![with-service-worker](docs/service-worker-caching.png "with-service-worker")
+With Service Worker: ![with-service-worker](docs/with-service-worker.png "with-service-worker")
+
+#### Conclusion
+The enhancements have an positive effect on file sizes and load times. However because the project and it's assets are so small in size, the effect is barely noticable. 
+With the minify for example the first meaningful paint improves with just 35 ms, which is barely noticeable but an improvement anyway. 
 
 ## Built with
 - [Node.js](https://nodejs.org/en/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [Express.js](https://expressjs.com/): A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- [EJS](https://ejs.co/):Embedded JavaScript templating.
+- [EJS](https://ejs.co/): Embedded JavaScript templating.
 - [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
 - [Nodemon](https://nodemon.io/): An utility that will monitor for any changes in your source and automatically restart your server.
 
