@@ -1,3 +1,4 @@
+const http = require('http');
 const createError = require('http-errors');
 const express = require('express');
 const minifyHtml = require('express-minify-html');
@@ -9,12 +10,15 @@ const detailRouter = require("./routes/detail");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Enforce https when on Heroku
+if (app.get("env") === "production") {
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 
 // Setup express and view engine
 app.set("view engine", "ejs")
     .set("views", "views")
     .use(express.static('dist'))
-    .use(enforce.HTTPS({trustProtoHeader: true}))
     .use(minifyHtml({
         override: true,
         exception_url: false,
@@ -48,6 +52,8 @@ app.use(function (err, req, res, next) {
     res.render('error', {title: `Error ${err.status}`});
 });
 
-app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
+http.createServer(app).listen(port, () =>{
+    console.log(`Server running on http://localhost:${port}`)
+});
 
 module.exports = app;
