@@ -1,6 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const minifyHtml = require('express-minify-html');
+const enforce = require('express-sslify');
 const modalRouter = require("./routes/modal");
 const overviewRouter = require("./routes/overview");
 const detailRouter = require("./routes/detail");
@@ -13,6 +14,7 @@ const port = process.env.PORT || 3000;
 app.set("view engine", "ejs")
     .set("views", "views")
     .use(express.static('dist'))
+    .use(enforce.HTTPS({trustProtoHeader: true}))
     .use(minifyHtml({
         override: true,
         exception_url: false,
