@@ -18,7 +18,7 @@ router.get("/:id", (req, res) => {
             res.render("detail", {
                 title: bookDetail.title,
                 book: bookDetail,
-                returnRoute: req.baseUrl.replace("/book", "")
+                returnRoute: req.headers.referer
             });
         });
 });
