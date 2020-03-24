@@ -1,0 +1,17 @@
+<%- include ("./partials/head.ejs") %>
+<div id="modal" class="modal">
+    <div id="select-topic" class="modal-content">
+        <div id="no-known-subject-topics">
+            <a class="button" id="home-button" href="/" style="float: right">🏠 Begin opnieuw</a>
+            <p>Kies een onderwerp dat jij leuk vindt!</p>
+            <div id="modal-topics-container" class="group-buttons-container">
+                <% for(let topic in topics) { %>
+                    <a class="button modal-topic" href="/topic/<%= topics[topic].toString().toLowerCase() %>">
+                        <%= topics[topic] %>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ("./partials/footer.ejs") %>

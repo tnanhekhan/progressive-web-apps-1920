@@ -1,0 +1,15 @@
+<%- include ("./partials/head.ejs") %>
+<div id="modal" class="modal">
+    <div id="select-group" class="modal-content">
+        <div id="known-subject-topics">
+            <a class="button" id="home-button" href="/" style="float: right">🏠 Begin opnieuw</a>
+            <p>Vul hier jouw onderwerp in:</p>
+            <form class="search-container ">
+                <input type="text " name="topic" class="book-search-input " id="modal-search-input"
+                       placeholder="Toets hier jouw onderwerp in! "/>
+                <button type="submit" id="modal-search-button" class="button search-button">Zoeken</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ("./partials/footer.ejs") %>
