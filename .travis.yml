@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 12.16
+  - 12.16
 script: true
 deploy:
   provider: firebase
@@ -13,4 +13,4 @@ deploy:
     branch: staging
 branches:
   only:
-  - staging
+    - staging
