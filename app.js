@@ -6,7 +6,7 @@ const overviewRouter = require("./routes/overview");
 const detailRouter = require("./routes/detail");
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 
 // Setup express and view engine
