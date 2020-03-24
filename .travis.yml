@@ -4,8 +4,10 @@ node_js:
 before_script:
   - npm install firebase-tools -g
   - cd functions && npm install
+  - cd ..
 script: true
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: qyfs1y624D1A8uzSR6b6ZpgadpGe9p0lMhQLkXEmhP79DKim0T4mabMjAJSFtQatsvViXopcs5vuLWrNvIG0XWLm/AzLqnjdfCd1x+wGCmiO5zEXHLZHSSzDLUBS9Fahi7c9+qv7o7ivjFxtHSuwcJ6pzZtsXoHBE/ntCg3/c2Py5gdDxwun24Xytau8VKh06cQf1kcjkNtjwxfITBslfkPVL6356Rm3nQx4dJOEglLUrc7qLSSzT0Sb0jsRt01UWF8owTFxSI7YV/9sKSLPXzJPrdHi9/Z7RzTa/sfu5m3JcBvHwp1giknG3TPffDY/3mK3gtkHyPOlM5LKHkw+JyWwFJbAHQmICDo2HcGziAWfXdQBY8AmlY8JQY1O+feObZnNMzRpxdSPD3Bh132BesQD5VJDZgVMlP300gkuvITk9RwmUmX4SM6MpKMPBQ8A8n+M3uchKPHrGBAogcsgp0eMcP+r060DO/HI8jjFwS+u0suOUCF0tRbZt7YnPzRwHKdwbIGCOR5ztT0Zy00M/5lFWoHMM/dlKW90CpZJdqCUBV56VKkJRoTrMgiu5499cCzF94w3tHh6VMpuhPD/3MwSTy/mYLxXXmTRSFwHoPBKbdftqakA4i69XuaT4O/EJTUejFkz6V4xIM9K3q7ToOYl2HAaLoAxFsjzif0CxKg=
