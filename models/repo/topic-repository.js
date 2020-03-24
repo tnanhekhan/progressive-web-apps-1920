@@ -17,16 +17,7 @@ class TopicRepository {
             ["Amsterdam"],
             ["Afrika"],
             ["Suriname"],
-
-            ["Geschiedenis"],
             ["Middeleeuwen"],
-            ["Prehistorie"],
-
-            ["Natuur"],
-            ["Aarde"],
-            ["Natuurwetenschappen"],
-            ["Ruimtevaart"],
-
             ["Reizen"],
             ["Eten"],
             ["Muziek"]
@@ -39,12 +30,9 @@ class TopicRepository {
             ["Honden"],
             ["Katten",],
             ["Paarden"],
-            ["Dinosaurussen"],
             ["Vogels"],
             ["Huisdieren"],
-            ["Wilde dieren"],
             ["Dolfijnen"],
-            ["Insecten"],
             ["Sport"],
             ["Voetbal"],
             ["Mode"],
