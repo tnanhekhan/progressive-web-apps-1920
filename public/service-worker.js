@@ -5,7 +5,7 @@ const precacheResources = [
     'css/styles.css',
     'css/modal.css',
     'css/button.css',
-    'img/background-image-2.png',
+    'img/background.png',
     'img/favicon.svg',
 ];
 
