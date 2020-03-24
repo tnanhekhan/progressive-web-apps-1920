@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const minifyHtml = require('express-minify-html');
 const modalRouter = require("./routes/modal");
 const overviewRouter = require("./routes/overview");
 const detailRouter = require("./routes/detail");
@@ -12,6 +13,18 @@ const port = process.env.port || 3000;
 app.set("view engine", "ejs")
     .set("views", "views")
     .use(express.static('dist'))
+    .use(minifyHtml({
+        override: true,
+        exception_url: false,
+        htmlMinifier: {
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes: true,
+            removeEmptyAttributes: true,
+            minifyJS: true
+        }
+    }))
     .use("/", modalRouter)
     .use("/topic", overviewRouter)
     .use("/topic/:topic/book", detailRouter)
@@ -34,3 +47,5 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
+
+module.exports = app;
