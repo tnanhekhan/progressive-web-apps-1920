@@ -1,0 +1,12 @@
+<%- include ("./partials/head.ejs") %>
+<div id="modal" class="modal">
+    <div id="topic-question" class="modal-content">
+        <a class="button" id="home-button" href="/" style="float: right">🏠 Begin opnieuw</a>
+        <p>Weet je al een onderwerp?</p>
+        <div class="group-buttons-container">
+            <a id="yes-button" class="button" href="<%= group %>/true">Ja</a>
+            <a id="no-button" class="button" href="<%= group %>/false">Nee</a>
+        </div>
+    </div>
+</div>
+<%- include ("./partials/footer.ejs") %>
