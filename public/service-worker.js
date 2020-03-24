@@ -3,8 +3,6 @@ const precacheResources = [
     '/',
     '/offline',
     'css/styles.css',
-    'css/modal.css',
-    'css/button.css',
     'img/background.png',
     'img/favicon.svg',
 ];
