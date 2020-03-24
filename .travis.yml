@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - 12.16
-script: true
+before_script:
+  - npm install -g gulp-cli
+script: gulp
 deploy:
   provider: heroku
   api_key:

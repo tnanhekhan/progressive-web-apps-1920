@@ -6,10 +6,14 @@
   "directories": {
     "example": "examples"
   },
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ],
   "scripts": {
+    "build": "gulp",
     "dev": "nodemon app.js",
-    "start": "node app.js",
-    "firebase": "firebase serve"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +28,15 @@
   "dependencies": {
     "axios": "^0.19.2",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
-    "nodemon": "^2.0.2"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "nodemon": "^2.0.2",
+    "run-sequence": "^1.2.2"
   }
 }

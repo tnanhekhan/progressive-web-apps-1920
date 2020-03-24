@@ -1,6 +1,5 @@
 const createError = require('http-errors');
 const express = require('express');
-const path = require('path');
 const modalRouter = require("./routes/modal");
 const overviewRouter = require("./routes/overview");
 const detailRouter = require("./routes/detail");
@@ -12,13 +11,11 @@ const port = process.env.port || 3000;
 // Setup express and view engine
 app.set("view engine", "ejs")
     .set("views", "views")
-    .use(express.static('public'))
+    .use(express.static('dist'))
     .use("/", modalRouter)
     .use("/topic", overviewRouter)
     .use("/topic/:topic/book", detailRouter)
     .use("/topic/:topic/:page/book", detailRouter);
-
-app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -36,4 +33,4 @@ app.use(function (err, req, res, next) {
     res.render('error', {title: `Error ${err.status}`});
 });
 
-module.exports = app;
+app.listen(port, () => console.log(` Server running on http://localhost:${port}`));
