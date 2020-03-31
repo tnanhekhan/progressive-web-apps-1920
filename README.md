@@ -13,6 +13,7 @@ This project is based on a project for OBA: https://github.com/tnanhekhan/projec
 5. [Feedback Week 2](#feedback-week-2)
 6. [Performance Enhancement](#performance-enhancement)  
 7. [Built with](#built-with)
+8. [Learning Goals Conclusion](#learning-goals-conclusion)
 
 ## Installation  
 Clone this repo with your favourite GIT CLI or GUI.  
@@ -75,6 +76,13 @@ Audit after Performance Enhancement: ![audit-after](docs/audit-after.png "audit-
 ### Conclusion
 The enhancements have an positive effect on file sizes and load times. However because the project and it's assets are so small in size, the effect is barely noticable. 
 With the minify for example the first meaningful paint improves with just 35 ms, which is barely noticeable but an improvement anyway. If this would project would be larger the performance enhancement would be more noticeable.
+
+## Learning Goals Conclusion
+- Client-side and Server-side rendering: During this course I have learned the difference between client-side and server-side rendering. This was a first time for me to work with Node.js and I liked using it very much. I might like it even more than client-side Javascript, especially because I can use the WebStorm debugger with Node.js. Learning Express.js was also quite useful and I might even use it in the future to set up a basic Api for example. I also learned about Gulp and setting up package.json.
+
+- Service Worker: Progressive Web Apps were a quite new concept for me but they are basically web apps that try to emulate the behaviour of actual native apps. Offline functionality is not a thing in "normal" web apps but in native apps it is. With the implementation of the Service Worker you can also give webapps this offline functionality. You can also cache resources with the service worker to limit the amount of network requests you have to make and to increase the performance of the web app. 
+
+- Critical Rendering Path: Implementing the service worker can help by optimizing the critical rendering path by reducing network requsts. I have also learned that by removing the whitespace in your HTML, CSS and Javascript you decrease the size of the file. By loading Javascript and Css async you prevent the blocking of the rendering of the page. The browser stops rendering html whenever it sees a script tag, that is why you also put the script tag just before you close the body.
 
 ## Built with
 - [Node.js](https://nodejs.org/en/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
