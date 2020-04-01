@@ -15,7 +15,7 @@ class Api {
         let authorization = process.env.API_KEY;
         let output = "&output=json";
         try {
-            return await axios.get(cors + baseUrl + endpoint + params + authorization + output);
+            return await axios.get(baseUrl + endpoint + params + authorization + output);
         } catch (error) {
             console.log(`Something went wrong: ${error}`);
         }
